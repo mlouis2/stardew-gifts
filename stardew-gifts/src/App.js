@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Item from './Item.js';
+import Character from './Character.js';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Stardew Valley Gift Guide</h1>
       </header>
+      <div className="Content">
+        <Character />
+        <h1>&nbsp;+&nbsp;</h1>
+        <Item />
+      </div>
     </div>
   );
 }
