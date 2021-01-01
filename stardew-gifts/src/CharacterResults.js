@@ -8,11 +8,11 @@ function CharacterResults(props) {
         items.push(
             <div key={result} className="characterEntry">
                 <img className="characterPortrait" src={portraits[result]}></img>
-                {result}
+                <div className="characterName">{result}</div>
             </div>
         )
     })
-    return <div>{items}</div>
+    return <div className="CharacterResultsContainer">{items}</div>
 }
 
 export default CharacterResults;
