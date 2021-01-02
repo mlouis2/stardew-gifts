@@ -21,4 +21,8 @@ function getPreference(character, item) {
     return preferences[itemIndex][characterIndex];
 }
 
-export { getPreference, valuesToEmoji, names, items };
+function getLoves(character) {
+    return items.filter(item => getPreference(character, item) === 4);
+}
+
+export { getPreference, getLoves, valuesToEmoji, names, items };

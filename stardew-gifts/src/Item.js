@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import './Column.css';
 import ItemResults from './ItemResults.js';
-import { items } from "./preferenceGetter.js"
+import { items, getLoves } from "./preferenceGetter.js"
 
-const MAX_ITEMS_DISPLAYED = 15;
+const MAX_ITEMS_DISPLAYED = 20;
 
 function Item(props) {
   const characterSelected = props["characterSelected"];
@@ -35,14 +35,29 @@ function Item(props) {
     const result = (filterExact)
       ? items.filter(item => item === search) 
       : items.filter(item => item.includes(search)).slice(0, MAX_ITEMS_DISPLAYED);
-    setItemSelected((result.length === 1) ? result[0] : null);
-    setResults(result)
+    updateResults(result);
+  }
+
+  function updateResults(resultsList) {
+    setItemSelected((resultsList.length === 1) ? resultsList[0] : null);
+    setResults(resultsList)
+  }
+
+  function showLoves() {
+    const loves = getLoves(characterSelected);
+    document.getElementById("itemInput").value = "";
+    updateResults(loves);
   }
 
   return (
     <div className="Item">
         <h1>Item</h1>
-        <input id="itemInput" onChange={onChange} placeholder="Green Algae"></input>
+        <input id="itemInput" onChange={onChange} placeholder="Amethyst"></input>
+        {(characterSelected !== null && characterSelected !== undefined) ? 
+          <div onClick={showLoves} className="checkLovesButton">
+            Show {characterSelected[0].toUpperCase() + characterSelected.substring(1)}'s loved gifts! 🔎
+          </div>
+        : null}
         <ItemResults results={results} character={characterSelected} entryOnClick={entryOnClick} />
     </div>
   );

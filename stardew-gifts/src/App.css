@@ -19,7 +19,6 @@
   box-shadow: 0 4px 5px -2px black;
   display: flex;
   flex-direction: column;
-  font-size: calc(10px + 2vmin);
   justify-content: center;
   min-height: 20vh;
   position: fixed;
@@ -34,13 +33,36 @@
 }
 
 .KeyPairing {
+  font-size: 16px;
   padding: 5px;
 }
 
 #KeyPairingContainer {
   display: flex;
-  font-size: 16px;
   justify-content: space-evenly;
+}
+
+.About {
+  bottom: 0px;
+  font-size: 16px;
+  position: fixed;
+  right: 0px;
+}
+
+.AboutTitle {
+  background-color: black;
+  border-radius: 5px 0 0 0;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.AboutInfo {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  text-align: left;
+  max-width: 275px;
 }
 
 .Content {

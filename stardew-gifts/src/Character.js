@@ -34,7 +34,7 @@ function Character(props) {
   return (
     <div className="Character">
         <h1>Character</h1>
-        <input id="characterInput" onChange={onChange} placeholder="Penny"></input>
+        <input id="characterInput" onChange={onChange} placeholder="Abigail"></input>
         <CharacterResults results={results} item={itemSelected} entryOnClick={entryOnClick}/>
     </div>
   );
