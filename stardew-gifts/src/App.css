@@ -4,28 +4,53 @@
   background-color: #ffdbab;
   font-family: 'Dosis', sans-serif;
   min-height: 100vh;
+  overflow: auto;
   text-align: -webkit-center;
   width: 100vw;
   cursor: url('./data/cursor.cur'), pointer;
 }
 
 .App-header {
+  align-items: flex-end;
   background-color: #ffdbab;
   background-image: url("./data/title.png");
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 0 4px 5px -2px black;
+  display: flex;
+  flex-direction: column;
   font-size: calc(10px + 2vmin);
+  justify-content: center;
   min-height: 20vh;
   position: fixed;
   width: 100%;
 }
 
+.Key {
+  bottom: 0px;
+  margin: 0 0 10px 20px;
+  position: fixed;
+  width: fit-content;
+}
+
+.KeyPairing {
+  padding: 5px;
+}
+
+#KeyPairingContainer {
+  display: flex;
+  font-size: 16px;
+  justify-content: space-evenly;
+}
+
 .Content {
+  padding-top: 175px;
+}
+
+.Columns {
   display: flex;
   font-size: 60px;
   height: 100%;
   justify-content: space-evenly;
-  padding-top: 175px;
   width: 60vw;
 }

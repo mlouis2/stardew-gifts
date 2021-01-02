@@ -2,11 +2,12 @@ import { useState } from 'react';
 import './Column.css';
 import ItemResults from './ItemResults.js';
 
-const MAX_ITEMS_DISPLAYED = 150;
+const MAX_ITEMS_DISPLAYED = 15;
 const preferences_json = require('./data/preferences.json');
 const items = Object.keys(preferences_json["items_to_indices"]).map(name => name.toLowerCase())
 
-function Item() {
+function Item(props) {
+  const characterSelected = props["characterSelected"];
 
   const [results, setResults] = useState(items.slice(0, MAX_ITEMS_DISPLAYED));
 
@@ -20,7 +21,7 @@ function Item() {
     <div className="Item">
         <h1>Item</h1>
         <input onChange={onChange} placeholder="Green Algae"></input>
-        <ItemResults results={results} />
+        <ItemResults results={results} character={characterSelected} />
     </div>
   );
 }

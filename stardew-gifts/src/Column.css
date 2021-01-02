@@ -1,11 +1,13 @@
 h1 {
     font-family: 'Dosis', sans-serif;
-    font-size: 40px;
+    font-size: 50px;
+    margin: 0px;
 }
 
 input {
+    border-radius: 5px;
     font-family: 'Dosis', sans-serif;
-    font-size: 50px;
+    font-size: 35px;
     height: 60px;
     margin-bottom: 15px;
     width: 300px;
@@ -26,11 +28,11 @@ input {
 }
 
 .characterEntry {
+    background-color: white;
     border: 1px solid black;
     border-radius: 5px;
     display: flex;
     height: 128px;
-    justify-content: space-between;
     font-size: 35px;
     padding: 10px 10px 0px 10px;
     margin: 10px;
@@ -42,5 +44,14 @@ input {
 }
 
 .itemEntry {
+    align-items: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
     font-size: 25px;
+    height: 45px;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
 }
