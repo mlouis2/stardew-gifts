@@ -39,6 +39,11 @@ input {
     width: 310px;
 }
 
+.characterEntry .preferenceEmoji {
+    align-self: center;
+    margin-left: auto;
+}
+
 .characterName {
     align-self: center;
 }

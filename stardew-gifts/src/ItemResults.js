@@ -1,43 +1,24 @@
 import './Column.css';
+import { getPreference, valuesToEmoji } from "./preferenceGetter.js"
 const preferences_json = require('./data/preferences.json');
-const characters_to_indices = preferences_json["characters_to_indices"];
-const items_to_indices = preferences_json["items_to_indices"];
-const preferences = preferences_json["preferences"]
-
-const values_to_emoji = {
-    0: "😡",
-    1: "👎",
-    2: "😐",
-    3: "😄",
-    4: "❤️"
-}
-values_to_emoji[-1] = "❓";
 
 function ItemResults(props) {
     const results = props["results"]
     const character = props["character"]
+    const entryOnClick = props["entryOnClick"]
     const items = []
 
-    function getPreference(character, item) {
-        const character_index = characters_to_indices[character];
-        const item_index = items_to_indices[item];
-        return preferences[item_index][character_index];
-    }
-
     results.forEach(result => {
-        if (character === undefined || character === null) {
-            items.push(<div key={result} className="itemEntry">{result}</div>)
-        } else {
-            const preference = getPreference(character, result);
-            items.push(
-                <div key={result} className="itemEntry">
-                    {result}
-                    <div className="preferenceEmoji">
-                        {values_to_emoji[preference]}
+        items.push(
+            <div key={result} className="itemEntry" onClick={() => entryOnClick(result)}>
+                <div className="itemName">{result}</div>
+                {(character === undefined || character === null) ? null : 
+                    <div className="preferenceEmoji" title={getPreference(character, result) === -1 ? "Gifting info unknown. This could be because the item was released in a recent update, or because it is a quest item or special item." : ""}>
+                        {valuesToEmoji[getPreference(character, result)]}
                     </div>
-                </div>
-            )
-        }
+                }
+            </div>
+        )
     })
     return <div>{items}</div>
 }

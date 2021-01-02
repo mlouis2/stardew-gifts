@@ -6,6 +6,7 @@ const titleImage = require("./data/title.png");
 
 function App() {
   const [characterSelected, setCharacterSelected] = useState(null);
+  const [itemSelected, setItemSelected] = useState(null);
 
   return (
     <div className="App">
@@ -32,8 +33,8 @@ function App() {
           </div>
         </div>
         <div className="Columns">
-          <Character callback={setCharacterSelected}/>
-          <Item characterSelected={characterSelected}/>
+          <Character itemSelected={itemSelected} callback={setCharacterSelected}/>
+          <Item characterSelected={characterSelected} callback={setItemSelected}/>
         </div>
       </div>
     </div>
