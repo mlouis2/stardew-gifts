@@ -70,5 +70,6 @@ input {
 .checkLovesButton {
     background-color: #853605;
     color: white;
+    cursor: pointer;
     font-size: 20px;
 }

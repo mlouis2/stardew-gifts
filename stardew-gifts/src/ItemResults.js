@@ -1,12 +1,11 @@
 import './Column.css';
-import { getPreference, valuesToEmoji } from "./preferenceGetter.js"
-const preferences_json = require('./data/preferences.json');
+import { getPreference, valuesToEmoji } from "./preferenceGetter.js";
 
 function ItemResults(props) {
-    const results = props["results"]
-    const character = props["character"]
-    const entryOnClick = props["entryOnClick"]
-    const items = []
+    const results = props["results"];
+    const character = props["character"];
+    const entryOnClick = props["entryOnClick"];
+    const items = [];
 
     results.forEach(result => {
         items.push(
@@ -18,9 +17,9 @@ function ItemResults(props) {
                     </div>
                 }
             </div>
-        )
-    })
-    return <div>{items}</div>
+        );
+    });
+    return <div>{items}</div>;
 }
 
 export default ItemResults;

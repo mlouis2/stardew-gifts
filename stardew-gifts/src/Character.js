@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './Column.css';
 import CharacterResults from './CharacterResults.js';
 import { names } from "./preferenceGetter.js"
@@ -10,9 +10,9 @@ function Character(props) {
   const [results, setResults] = useState(names);
 
   function entryOnClick(characterSelected) {
-    characterSelected = characterSelected[0].toUpperCase() + characterSelected.substring(1)
+    characterSelected = characterSelected[0].toUpperCase() + characterSelected.substring(1);
     document.getElementById("characterInput").value = characterSelected;
-    updateInput(characterSelected)
+    updateInput(characterSelected);
   }
 
   function onChange(e) {
@@ -23,12 +23,8 @@ function Character(props) {
   function updateInput(search) {
     search = search.toLowerCase();
     const result = names.filter(name => name.includes(search));
-    if (result.length === 1) {
-      setCharacterSelected(result[0])
-    } else {
-      setCharacterSelected(null)
-    }
-    setResults(result)
+    setCharacterSelected((result.length === 1) ? result[0] : null);
+    setResults(result);
   }
 
   return (

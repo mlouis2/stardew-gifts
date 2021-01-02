@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Column.css';
 import ItemResults from './ItemResults.js';
-import { items, getLoves } from "./preferenceGetter.js"
+import { items, getLoves } from "./preferenceGetter.js";
 
 const MAX_ITEMS_DISPLAYED = 20;
 
@@ -13,10 +13,10 @@ function Item(props) {
 
   function entryOnClick(itemSelected) {
     // Capitalize first letter in each word so it matches search results
-    let new_words = []
+    let new_words = [];
     itemSelected.split(" ").forEach((word) => {
       new_words.push(word[0].toUpperCase() + word.substring(1));
-    })
+    });
     itemSelected = new_words.join(" ");
     // Set the input box value and then update the search results
     document.getElementById("itemInput").value = itemSelected;
@@ -40,7 +40,7 @@ function Item(props) {
 
   function updateResults(resultsList) {
     setItemSelected((resultsList.length === 1) ? resultsList[0] : null);
-    setResults(resultsList)
+    setResults(resultsList);
   }
 
   function showLoves() {

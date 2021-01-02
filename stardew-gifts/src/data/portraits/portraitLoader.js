@@ -32,10 +32,12 @@ import vincent from "./vincent.png";
 import willy from "./willy.png";
 import wizard from "./wizard.png";
 
-export default {
+const portraits = {
     abigail, alex, caroline, clint, demetrius, dwarf,
     elliott, emily, evelyn, george, gus, haley, harvey,
     jas, jodi, kent, krobus, leah, lewis, linus, marnie,
     maru, pam, penny, pierre, robin, sam, sandy, sebastian,
     shane, vincent, willy, wizard
 }
+
+export default portraits;

@@ -4,7 +4,6 @@ import Item from './Item.js';
 import Character from './Character.js';
 import Key from './Key.js';
 import About from './About.js';
-const titleImage = require("./data/title.png");
 
 function App() {
   const [characterSelected, setCharacterSelected] = useState(null);
