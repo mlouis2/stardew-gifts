@@ -10,6 +10,7 @@ function Item(props) {
   const setItemSelected = props["callback"];
 
   const [results, setResults] = useState(items.slice(0, MAX_ITEMS_DISPLAYED));
+  const [amountMissingResults, setAmountMissingResults] = useState(items.length - MAX_ITEMS_DISPLAYED);
 
   function entryOnClick(itemSelected) {
     // Capitalize first letter in each word so it matches search results
@@ -32,9 +33,15 @@ function Item(props) {
   // i.e. "Pumpkin" and "Pumpkin Seeds"
   function updateInput(search, filterExact=false) {
     search = search.toLowerCase();
-    const result = (filterExact)
+    let result = (filterExact)
       ? items.filter(item => item === search) 
-      : items.filter(item => item.includes(search)).slice(0, MAX_ITEMS_DISPLAYED);
+      : items.filter(item => item.includes(search))
+    if (result.length > MAX_ITEMS_DISPLAYED) {
+      setAmountMissingResults(result.length - MAX_ITEMS_DISPLAYED);
+    } else {
+      setAmountMissingResults(0);
+    }
+    result = result.slice(0, MAX_ITEMS_DISPLAYED);
     updateResults(result);
   }
 
@@ -44,6 +51,7 @@ function Item(props) {
   }
 
   function showLoves() {
+    setAmountMissingResults(0);
     const loves = getLoves(characterSelected);
     document.getElementById("itemInput").value = "";
     updateResults(loves);
@@ -59,6 +67,9 @@ function Item(props) {
           </div>
         : null}
         <ItemResults results={results} character={characterSelected} entryOnClick={entryOnClick} />
+        {amountMissingResults === 0 ? null :
+          <div id="ResultLimitationsMessage">Displaying {MAX_ITEMS_DISPLAYED} out of {amountMissingResults + MAX_ITEMS_DISPLAYED} results.</div>
+        }
     </div>
   );
 }

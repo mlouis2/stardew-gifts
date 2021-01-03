@@ -18,8 +18,6 @@ function About() {
                     <br/>
                     Created with React, hosted through Firebase.
                     <br/>
-                    Have feedback? Leave it <a target="_blank" rel="noopener noreferrer" href="https://forms.gle/QK7Vv8QyuoXDVFp2A">here!</a>
-                    <br/>
                     <br/>
                     Credits:
                     <br />
@@ -27,7 +25,7 @@ function About() {
                     <br/>
                     <a target="_blank" rel="noopener noreferrer" href="https://stardewvalleywiki.com/Stardew_Valley_Wiki">Gift Data and Character Portraits</a>
                     <br/>
-                    Stardew Valley created by <a target="_blank" rel="noopener noreferrer" href="https://stardewvalleywiki.com/ConcernedApe">ConcernedApe</a>.
+                    Stardew Valley created by <a target="_blank" rel="noopener noreferrer" href="https://stardewvalleywiki.com/ConcernedApe">ConcernedApe</a>
                 </div>
             : null}
         </div>

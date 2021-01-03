@@ -78,6 +78,10 @@ input {
     font-size: 20px;
 }
 
+#ResultLimitationsMessage {
+    font-size: 15px;
+}
+
 @media only screen and (max-width: 800px) {
     .characterEntry {
         font-size: 25px;
