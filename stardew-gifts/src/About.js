@@ -29,7 +29,7 @@ function About() {
                 </div>
             : null}
         </div>
-    )
+    );
 }
 
 export default About;

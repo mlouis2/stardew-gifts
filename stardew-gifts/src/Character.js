@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Column.css';
 import CharacterResults from './CharacterResults.js';
-import { names } from "./preferenceGetter.js"
+import { names } from "./preferenceGetter.js";
 
 function Character(props) {
   const itemSelected = props["itemSelected"];
@@ -16,8 +16,7 @@ function Character(props) {
   }
 
   function onChange(e) {
-    const search = e.target.value;
-    updateInput(search);
+    updateInput(e.target.value);
   }
 
   function updateInput(search) {
