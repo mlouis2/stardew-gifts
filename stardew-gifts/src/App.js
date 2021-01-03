@@ -4,6 +4,7 @@ import Item from './Item.js';
 import Character from './Character.js';
 import Key from './Key.js';
 import About from './About.js';
+import titleImage from './data/title.png';
 
 function App() {
   const [characterSelected, setCharacterSelected] = useState(null);
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <img id="TitleImage" src={titleImage}></img>
       </header>
       <div className="Content">
         <Key/>

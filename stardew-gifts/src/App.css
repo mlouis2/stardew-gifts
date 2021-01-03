@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
 
+html {
+  background-color: #ffdbab;
+}
+
 .App {
   background-color: #ffdbab;
   font-family: 'Dosis', sans-serif;
@@ -11,18 +15,18 @@
 }
 
 .App-header {
-  align-items: flex-end;
+  align-items: center;
   background-color: #ffdbab;
-  background-image: url("./data/title.png");
-  background-position: center;
-  background-repeat: no-repeat;
   box-shadow: 0 4px 5px -2px black;
   display: flex;
-  flex-direction: column;
+  height: 20vh;
   justify-content: center;
-  min-height: 20vh;
   position: fixed;
   width: 100%;
+}
+
+#TitleImage {
+  max-width: 100vw;
 }
 
 .Key {
@@ -66,7 +70,7 @@
 }
 
 .Content {
-  padding-top: 175px;
+  padding-top: 25vh;
 }
 
 .Columns {
@@ -74,5 +78,17 @@
   font-size: 60px;
   height: 100%;
   justify-content: space-evenly;
-  width: 60vw;
+  width: 80vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .Columns {
+    width: 100vw;
+  }
+  .Key {
+    display: none;
+  }
+  .About {
+    display: none;
+  }
 }

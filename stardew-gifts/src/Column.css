@@ -10,7 +10,7 @@ input {
     font-size: 35px;
     height: 60px;
     margin-bottom: 15px;
-    width: 300px;
+    width: 90%;
 }
 
 .itemEntry, .characterEntry {
@@ -18,7 +18,11 @@ input {
 }
 
 .Character {
-    min-width: 350px;
+    max-width: 50%;
+}
+
+.Item {
+    max-width: 50%;
 }
 
 .CharacterResultsContainer {
@@ -37,7 +41,7 @@ input {
     font-size: 35px;
     padding: 10px 10px 0px 10px;
     margin: 10px;
-    width: 310px;
+    min-width: 310px;
 }
 
 .characterEntry .preferenceEmoji {
@@ -58,7 +62,7 @@ input {
     height: 45px;
     justify-content: space-between;
     padding: 10px;
-    /* margin: 10px; */
+    text-align: left;
 }
 
 .checkLovesButton, .itemEntry {
@@ -72,4 +76,36 @@ input {
     color: white;
     cursor: pointer;
     font-size: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+    .characterEntry {
+        font-size: 25px;
+        min-width: 40%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+    }
+    input {
+        font-size: 25px;
+    }
+    .characterEntry {
+        font-size: 15px;
+        height: 60px;
+        margin: 5px 0 5px 0;
+        min-width: 50%;
+    }
+    .characterPortrait {
+        height: 60px;
+        width: 60px;
+    }
+    .itemEntry {
+        font-size: 15px;
+    }
+    .checkLovesButton {
+        font-size: 13px;
+    }
 }
