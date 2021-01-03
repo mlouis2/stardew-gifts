@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img id="TitleImage" src={titleImage}></img>
+        <img id="TitleImage" src={titleImage} alt="Stardew Valley Gift Guide title"></img>
       </header>
       <div className="Content">
         <Key/>

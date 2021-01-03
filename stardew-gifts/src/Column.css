@@ -91,6 +91,7 @@ input {
     }
     input {
         font-size: 25px;
+        width: 80%
     }
     .characterEntry {
         font-size: 15px;

@@ -14,7 +14,9 @@ function About() {
             </div>
             {expanded ?
                 <div className="AboutInfo">
-                    App created by Maddie.
+                    App created by Maddie. :)
+                    <br/>
+                    Created with React, hosted through Firebase.
                     <br/>
                     Have feedback? Leave it <a target="_blank" rel="noopener noreferrer" href="https://forms.gle/QK7Vv8QyuoXDVFp2A">here!</a>
                     <br/>
