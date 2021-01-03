@@ -23,6 +23,8 @@ function About() {
                     <br />
                     <a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/StardewValley/comments/ase617/item_textbox_templates_for_you_symbols_font/">Item Textbox Header</a>
                     <br/>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.cursor.cc/?action=icon&file_id=93151">Cursor</a>
+                    <br/>
                     <a target="_blank" rel="noopener noreferrer" href="https://stardewvalleywiki.com/Stardew_Valley_Wiki">Gift Data and Character Portraits</a>
                     <br/>
                     Stardew Valley created by <a target="_blank" rel="noopener noreferrer" href="https://stardewvalleywiki.com/ConcernedApe">ConcernedApe</a>
